@@ -9,12 +9,12 @@ This vagrantfile provides a simplier solution by using docker client with vagran
 
 ### With boot2docker
 
-    [Docker Mac Client] --> DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375 --> boot2docker.iso
+    [Docker Mac Client] --> tcp://$(boot2docker ip 2>/dev/null):2375 --> boot2docker.iso
 
 
 ### With vagrant
 
-    [Docker Mac Client] --> DOCKER_HOST=tcp://localhost:4243 --> Vagrant docker instance
+    [Docker Mac Client] --> =tcp://localhost:4243 --> Vagrant docker instance
 
 
 ## Installation
