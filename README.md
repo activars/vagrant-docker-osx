@@ -9,18 +9,18 @@ This vagrantfile provides a simplier solution by using docker client with vagran
 
 ### With boot2docker
 
-    [docker client] --> DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375 --> boot2docker.iso
+    [Docker Mac Client] --> DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375 --> boot2docker.iso
 
 
 ### With vagrant
 
-    [docker client] --> DOCKER_HOST=tcp://localhost:4243 --> Vagrant docker instance
+    [Docker Mac Client] --> DOCKER_HOST=tcp://localhost:4243 --> Vagrant docker instance
 
 
 ## Installation
   
-  * Install vagrant
-  * Install boot2docker, we only use the docker client provided by boot2docker
+  * Install [Vagrant](https://www.vagrantup.com/downloads.html)
+  * Install [boot2docker](https://github.com/boot2docker/osx-installer/releases), we only use the docker client provided by boot2docker
 
 #### Step 1: Provisioning
 
@@ -46,18 +46,14 @@ Done!
 
 #### Volumnes
 
-Vagrant by default mounts current `Vagrantfile` working directory to '/vagrant'. You can change source by adding the following line to Vagrantfile:
+Vagrant by default mounts current `Vagrantfile` working directory to '/vagrant'. You can change source by adding the following line to Vagrantfile (read comments in the file):
 
     config.vm.synced_folder "/Projects", "/vagrant"
 
 
-You can mount with docker normally:
+Now docker can mount your directory:
 
     docker run -v /vagrant:/container-dir <container-id>
-
-
-
-
 
 
 
