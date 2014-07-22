@@ -5,7 +5,7 @@ Running Docker with boot2docker has many compatibility issues on Mac OSX, especi
 
 Read this boot2docker issue for details: [#4023](https://github.com/dotcloud/docker/issues/4023)
 
-This vagrantfile provides a simplier solution by using docker client with vagrant host. File sharing feature is provided by vargant. You have more control over your docker instance.
+This vagrantfile provides a simplier solution by using docker client with vagrant host. File sharing feature is provided by vargant. You have more control over your docker daemon.
 
 ### With boot2docker
 
