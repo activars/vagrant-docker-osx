@@ -44,7 +44,7 @@ Finally reload/source your environment variables. Now you can use `docker` comma
 Done!
 
 
-#### Volumnes
+#### Volumes
 
 Vagrant by default mounts current `Vagrantfile` working directory to '/vagrant'. You can change source by adding the following line to Vagrantfile (read comments in the file):
 
