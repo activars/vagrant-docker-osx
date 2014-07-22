@@ -19,4 +19,8 @@ service docker restart
 SCRIPT
         docker.vm.provision :shell, :inline => $script
     end
+    
+    
+    # uncomment or change the directory you would like to make it visible to Docker
+    # config.vm.synced_folder "/Projects", "/vagrant"
 end
