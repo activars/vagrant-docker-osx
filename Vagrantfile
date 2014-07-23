@@ -6,6 +6,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         docker.vm.box_url = "http://files.vagrantup.com/precise64.box"
         docker.vm.network "forwarded_port", guest: 80, host:58080
         docker.vm.network "forwarded_port", guest: 4243, host: 4243
+        # Configure this if you need to forward ports to localhost
+        # docker.vm.network "forwarded_port", guest: 8888, host: 8888
+        
         $script = <<SCRIPT
 wget -q -O - https://get.docker.io/gpg | apt-key add -
 echo deb http://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list
